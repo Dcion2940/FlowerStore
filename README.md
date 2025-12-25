@@ -19,3 +19,16 @@ A district-focused landing page that surfaces flower shops from `google-FlowerSt
    - Use CTAs on each card: 立即訂花 (map page), 導航 (Google Maps directions), 打電話 (tel link when available)
 
 The legacy `package-sample.json` remains if you want to restore the original build tooling, but the current page works as a static site without extra setup.
+You're ready to go! Run any task by typing `npm run task` (where "task" is the name of the task in the `"scripts"` object). The most useful task for rapid development is `watch`. It will start a new server, open up a browser and watch for any SCSS or JS changes in the `src` directory; once it compiles those changes, the browser will automatically inject the changed file(s)!
+
+## Data
+
+The raw Google Maps export is stored at `google-FlowerStore-2025-12-25.csv`. A cleaned version with semantic headers and normalized numeric values is available at `data/flowerstores.cleaned.csv` (generated via `python scripts/clean_flowerstores.py`). The cleaned schema is:
+
+- `url`: Listing URL
+- `name`: Business name
+- `rating`: Float rating value
+- `review_count`: Integer review count (blank if unavailable)
+- `address`: Street address
+- `phone`: Phone number (may be blank)
+- `image_url`: Thumbnail URL
