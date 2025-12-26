@@ -281,7 +281,7 @@ body {
   background-color: #fdf2f8;
 }
 
-.shop-card__body { padding: 14px; display: flex; flex-direction: column; gap: 8px; }
+.shop-card__body { padding: 14px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .shop-card__title { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .shop-card__title h3 { margin: 0; font-size: 16px; }
 
@@ -297,9 +297,15 @@ body {
 .meta { color: var(--muted); font-size: 13px; margin: 0; }
 .address { color: var(--text); font-size: 14px; margin: 0; }
 
-.shop-card__cta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.shop-card__cta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
 .shop-card__cta .button { flex: 1; min-width: 120px; }
 .shop-card__cta .button[aria-disabled="true"] { cursor: not-allowed; opacity: 0.6; }
+
+.timestamp-note {
+  margin: 6px 0 0;
+  color: #e5e7eb;
+  font-size: 13px;
+}
 
 .faq {
   margin-top: 18px;

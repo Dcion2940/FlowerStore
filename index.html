@@ -34,13 +34,13 @@
                 <div class="container hero-layout">
                     <div class="hero-copy">
                         <p class="eyebrow">資料驅動的花店導覽</p>
-                        <h1>以評分、評價數排序的板橋花店口袋名單</h1>
-                        <p class="lede">清洗 <strong>google-FlowerStore-2025-12-25.csv</strong>，轉為可用的 JSON，並依 <strong>評分</strong>、<strong>評價數</strong> 自動排序。每家店卡片提供「立即訂花」、「導航」、「打電話」三個 CTA，方便立刻行動。</p>
+                        <h1>以評分、評價數排序的板橋、中和花店口袋名單</h1>
+                        <p class="lede">Google Map 蒐集板橋與中和的花店資訊，依 <strong>評分</strong>、<strong>評價數</strong> 自動排序。每家店卡片提供「立即訂花」、「導航」、「打電話」三個 CTA，方便立即行動。</p>
                         <div class="hero-actions">
                             <a class="button button-primary" href="#districts">快速挑店</a>
-                            <a class="button button-ghost" href="#filters">設定排序與篩選</a>
                         </div>
-                        <div class="pill">資料來源 ➜ google-FlowerStore-2025-12-25.csv ▸ data/shops.json</div>
+                        <div class="pill">資料來源 ➜ Google Map ・ 板橋 / 中和花店</div>
+                        <p class="timestamp-note" aria-label="資料蒐集時間">蒐集時間：2025/12/25，最新評價與資訊以 Google Map 為準。</p>
                         <dl class="hero-stats" id="hero-stats" aria-label="資料摘要">
                             <div>
                                 <dt>收錄店家</dt>
@@ -57,13 +57,13 @@
                         </dl>
                     </div>
                     <aside class="hero-panel" aria-label="資料處理說明">
-                        <h2>資料進 / 出</h2>
+                        <h2>資訊重點</h2>
                         <ol>
-                            <li>以 Node 腳本 <code>scripts/transform-data.js</code> 清洗 CSV，輸出 <code>data/shops.json</code>。</li>
-                            <li>前端載入 JSON，填入各區段（Hero、卡片、QA），並提供排序/篩選。</li>
-                            <li>依需求預留 <code>image_url</code> 欄位，方便放上店家照片或示意圖。</li>
+                            <li>來源：Google Map，收錄板橋、中和周邊花店。</li>
+                            <li>排序：優先評分，再看評價數，亦可改用評價數排序。</li>
+                            <li>篩選：區域、關鍵字、最低評分，搭配 CTA 直接行動。</li>
                         </ol>
-                        <div class="panel-note">排序：評分→評價數。篩選：區域、關鍵字、最低評分。</div>
+                        <div class="panel-note">CTA：立即訂花、導航、打電話；排序與篩選皆可即時更新。</div>
                     </aside>
                 </div>
             </section>
@@ -116,7 +116,7 @@
             <div class="container footer-inner">
                 <div>
                     <div class="brand-title">FlowerStore Radar</div>
-                    <p class="muted">以 CSV ➜ JSON 的資料管線驅動，幫你比對板橋花店的評價聲量。</p>
+                    <p class="muted">以 Google Map 的板橋、中和花店資料，快速比對評價與聲量。</p>
                 </div>
                 <div class="footer-actions">
                     <a href="#hero" class="link">回到頂部</a>
